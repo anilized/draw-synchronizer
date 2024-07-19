@@ -1,0 +1,8 @@
+quartz:
+  overwrite-existing-jobs: true
+  properties:
+    org:
+      quartz:
+        jobStore:
+          class: org.quartz.impl.jdbcjobstore.JobStoreTX
+          driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
