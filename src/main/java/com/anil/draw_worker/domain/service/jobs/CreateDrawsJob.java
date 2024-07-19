@@ -19,7 +19,7 @@ public class CreateDrawsJob implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         log.info("Job ** {} ** fired @ {}", jobExecutionContext.getJobDetail().getKey().getName(), jobExecutionContext.getFireTime());
-        drawService.createDraws();
+        drawService.generateDraw();
         log.info("Next job -> {}", jobExecutionContext.getNextFireTime());
     }
 }
